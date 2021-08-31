@@ -23,15 +23,15 @@ local theme = lush(function()
   return {
     Normal    { bg = hsl(0, 0, 14), fg = hsl(45, 18, 87) },
     CursorLine   { bg = hsl(0, 0, 3) },
-    Comment      { fg = hsl(47, 6, 57), gui = "Italic" },
+    Comment      { fg = hsl(47, 6, 57), gui = "italic" },
     Visual       { bg = hsl(12, 6, 31) },
     Constant       { fg = hsl(6, 70, 66) }, -- (preferred) any constant
-    String         { fg = hsl(93, 73, 61), gui = "Italic" }, --   a string constant: "this is a string"
+    String         { fg = hsl(93, 73, 61), gui = "italic" }, --   a string constant: "this is a string"
     Keyword        { fg = hsl(214, 86, 75) }, --  any other keyword
     Function       { fg = hsl(77, 67, 71) }, -- function name (also: methods for classes)
     Cursor       { bg = hsl(0, 0, 40), fg = CursorLine.bg }, -- character under the cursor
-    Error          { fg = hsl(0, 100, 50) }, -- (preferred) any erroneous construct
-    WarningMsg   { fg = hsl(34, 100, 50) }, -- warning messages
+    Error          { fg = hsl(0, 100, 50), gui = "italic" }, -- (preferred) any erroneous construct
+    WarningMsg   { fg = hsl(34, 100, 50), gui = "italic" }, -- warning messages
     NonText      { fg = hsl(0, 0, 30) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Search       { bg = hsl(280, 100, 76), fg = CursorLine.bg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 
@@ -140,10 +140,10 @@ local theme = lush(function()
     -- LspReferenceRead                     { }, -- used for highlighting "read" references
     -- LspReferenceWrite                    { }, -- used for highlighting "write" references
 
-    LspDiagnosticsDefaultError           { Error }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    LspDiagnosticsDefaultWarning         { WarningMsg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    -- LspDiagnosticsDefaultInformation     { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-    -- LspDiagnosticsDefaultHint            { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultError           { Error, bg = CursorLine.bg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultWarning         { WarningMsg, bg = CursorLine.bg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultInformation     { }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    LspDiagnosticsDefaultHint            { WarningMsg, bg = CursorLine.bg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
     -- LspDiagnosticsVirtualTextError       { }, -- Used for "Error" diagnostic virtual text
     -- LspDiagnosticsVirtualTextWarning     { }, -- Used for "Warning" diagnostic virtual text
@@ -163,7 +163,7 @@ local theme = lush(function()
     LspDiagnosticsSignError              { fg = Error.fg, bg = CursorLine.bg }, -- Used for "Error" signs in sign column
     LspDiagnosticsSignWarning            { fg = WarningMsg.fg, bg = CursorLine.bg }, -- Used for "Warning" signs in sign column
     -- LspDiagnosticsSignInformation        { }, -- Used for "Information" signs in sign column
-    -- LspDiagnosticsSignHint               { }, -- Used for "Hint" signs in sign column
+    LspDiagnosticsSignHint               { fg = WarningMsg.fg, bg = CursorLine.bg }, -- Used for "Hint" signs in sign column
 
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
