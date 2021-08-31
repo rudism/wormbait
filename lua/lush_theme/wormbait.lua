@@ -45,11 +45,11 @@ local theme = lush(function()
     DiffChange   { }, -- diff mode: Changed line |diff.txt|
     DiffDelete   { }, -- diff mode: Deleted line |diff.txt|
     DiffText     { }, -- diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer  { bg = CursorLine.bg, fg = NonText.fg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    EndOfBuffer  { NonText }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     TermCursor   { }, -- cursor in a focused terminal
     TermCursorNC { }, -- cursor in an unfocused terminal
     ErrorMsg     { Error }, -- error messages on the command line
-    VertSplit    { }, -- the column separating vertically split windows
+    VertSplit    { fg = CursorLine.bg }, -- the column separating vertically split windows
     Folded       { }, -- line used for closed folds
     FoldColumn   { }, -- 'foldcolumn'
     SignColumn   { CursorLine }, -- column where |signs| are displayed
