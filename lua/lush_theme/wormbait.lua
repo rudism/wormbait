@@ -127,6 +127,7 @@ local theme = lush(function()
     -- language specific stuff
     csGeneric { Function },
     yamlBlockMappingKey { Function },
+    sqlKeyword { Function },
   }
 end)
 
