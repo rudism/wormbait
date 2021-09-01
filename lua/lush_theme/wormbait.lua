@@ -47,7 +47,7 @@ local theme = lush(function()
     MoreMsg      { },
     NormalFloat  { },
     NormalNC     { },
-    Pmenu        { },
+    Pmenu        { bg = CursorLine.bg },
     PmenuSel     { bg = Keyword.fg, fg = CursorLine.bg },
     PmenuSbar    { CursorLine },
     PmenuThumb   { bg = NonText.fg },
@@ -127,7 +127,7 @@ local theme = lush(function()
     -- language specific stuff
     csGeneric { Function },
     yamlBlockMappingKey { Function },
-    sqlKeyword { Function },
+    sqlKeyword { Keyword },
   }
 end)
 
