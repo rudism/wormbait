@@ -124,8 +124,9 @@ local theme = lush(function()
     GitSignsChange { bg = SignColumn.bg, fg = Keyword.fg },
     GitSignsDelete { bg = SignColumn.bg, fg = Constant.fg },
 
-    -- ftype specific stuff
+    -- language specific stuff
     csGeneric { Function },
+    yamlBlockMappingKey { Function },
   }
 end)
 
