@@ -119,6 +119,11 @@ local theme = lush(function()
     LspDiagnosticsSignInformation        { bg = CursorLine.bg },
     LspDiagnosticsSignHint               { fg = WarningMsg.fg, bg = CursorLine.bg },
 
+    -- gitsigns
+    GitSignsAdd { bg = SignColumn.bg, fg = String.fg },
+    GitSignsChange { bg = SignColumn.bg, fg = Keyword.fg },
+    GitSignsDelete { bg = SignColumn.bg, fg = Constant.fg },
+
     -- ftype specific stuff
     csGeneric { Function },
   }
