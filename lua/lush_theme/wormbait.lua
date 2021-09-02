@@ -112,12 +112,12 @@ local theme = lush(function()
     LspDiagnosticsDefaultError           { Error, bg = CursorLine.bg },
     LspDiagnosticsDefaultWarning         { WarningMsg, bg = CursorLine.bg },
     LspDiagnosticsDefaultInformation     { bg = CursorLine.bg },
-    LspDiagnosticsDefaultHint            { WarningMsg, bg = CursorLine.bg },
+    LspDiagnosticsDefaultHint            { Comment, bg = CursorLine.bg },
 
     LspDiagnosticsSignError              { fg = Error.fg, bg = CursorLine.bg },
     LspDiagnosticsSignWarning            { fg = WarningMsg.fg, bg = CursorLine.bg },
     LspDiagnosticsSignInformation        { bg = CursorLine.bg },
-    LspDiagnosticsSignHint               { fg = WarningMsg.fg, bg = CursorLine.bg },
+    LspDiagnosticsSignHint               { fg = Comment.fg, bg = CursorLine.bg },
 
     -- gitsigns
     GitSignsAdd { bg = SignColumn.bg, fg = String.fg },
