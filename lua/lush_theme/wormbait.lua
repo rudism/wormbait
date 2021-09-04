@@ -58,7 +58,7 @@ local theme = lush(function()
     SpellCap     { WarningMsg },
     SpellLocal   { WarningMsg },
     SpellRare    { WarningMsg },
-    StatusLine   { CursorLine },
+    StatusLine   { },
     StatusLineNC { },
     TabLine      { },
     TabLineFill  { },
