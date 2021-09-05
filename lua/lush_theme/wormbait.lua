@@ -143,6 +143,7 @@ local theme = lush(function()
     typescriptObjectStaticMethod { Identifier },
     typescriptPaymentShippingOptionProp { Identifier },
     typescriptVariable { Keyword },
+    typescriptEnumKeyword { Keyword },
   }
 end)
 
