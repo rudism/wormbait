@@ -128,6 +128,13 @@ local theme = lush(function()
     csGeneric { Function },
     yamlBlockMappingKey { Function },
     sqlKeyword { Keyword },
+    typescriptVariable { Keyword },
+    typescriptDateMethod { Identifier },
+    typescriptGlobal { Function },
+    typescriptBOMWindowProp { Function },
+    typescriptDOMDocProp { Identifier },
+    typescriptDOMEventTargetMethod { Identifier },
+    typescriptBOMWindowMethod { Identifier },
   }
 end)
 
