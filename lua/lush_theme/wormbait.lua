@@ -136,6 +136,7 @@ local theme = lush(function()
     typescriptDOMEventTargetMethod { Identifier },
     typescriptBOMWindowMethod { Identifier },
     typescriptAbstract { Keyword },
+    typescriptBOMLocationMethod { Identifier },
   }
 end)
 
