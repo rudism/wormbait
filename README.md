@@ -1,3 +1,5 @@
+**Note:** Active development has moved to https://code.sitosis.com/rudism/wormbait.nvim
+
 A Lush Theme for Neovim.
 ===
 
